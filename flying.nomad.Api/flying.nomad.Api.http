@@ -1,0 +1,6 @@
+@flying.nomad.Api_HostAddress = http://localhost:5075
+
+GET {{flying.nomad.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
