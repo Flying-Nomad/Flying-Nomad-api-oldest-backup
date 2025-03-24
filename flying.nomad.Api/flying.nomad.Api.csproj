@@ -13,6 +13,7 @@
 
   <ItemGroup>
   <ProjectReference Include="..\flying.nomad.Domain\flying.nomad.Domain.csproj" />
+  <ProjectReference Include="..\flying.nomad.Data\flying.nomad.Data.csproj" />
 </ItemGroup>
 
 </Project>
