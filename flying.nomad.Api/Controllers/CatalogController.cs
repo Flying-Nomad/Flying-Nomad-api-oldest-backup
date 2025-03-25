@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using flying.nomad.Domain.Catalog;
 
+
 namespace flying.nomad.Api.Controllers {
     [ApiController]
     [Route("[controller]")]
