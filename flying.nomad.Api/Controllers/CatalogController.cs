@@ -1,12 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
 using flying.nomad.Domain.Catalog;
-
+using flying.nomad.Data;
 
 namespace flying.nomad.Api.Controllers {
     [ApiController]
-    [Route("[controller]")]
+    [Route("/catalog")]
 public class CatalogController : ControllerBase {
+    private readonly StoreContext _db;
+    public CatalogController(StoreContext db) {
+        _db = db;
+    }
+
     [HttpGet]
+    public IActionResult GetItems() {
+        return Ok(_db.Items);
+    }
+
+    /*
     public IActionResult GetItems() {
         var items = new List<Item>() {
             new Item("Shirt", "Ohio State Shirt", "Nike", 29.99m),
@@ -14,6 +24,7 @@ public class CatalogController : ControllerBase {
         };
         return Ok(items);
     }
+    */
 
     [HttpGet("{id:int}")]
     public IActionResult GetItem(int id) {
